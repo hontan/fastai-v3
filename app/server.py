@@ -30,7 +30,8 @@ async def download_file(url, dest):
 
 
 async def setup_learner():
-    await download_file(export_file_url, path / export_file_name)
+    #await download_file(export_file_url, path / export_file_name)
+	await download_file(https://drive.google.com/open?id=1P0YY48wqSCku8sc8KMVJNakwVVm6Y1kW)
     try:
         learn = load_learner(path, export_file_name)
         return learn
