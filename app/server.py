@@ -9,7 +9,8 @@ from starlette.middleware.cors import CORSMiddleware
 from starlette.responses import HTMLResponse, JSONResponse
 from starlette.staticfiles import StaticFiles
 
-export_file_url = 'https://www.dropbox.com/s/6bgq8t6yextloqp/export.pkl?raw=1'
+# export_file_url = 'https://www.dropbox.com/s/6bgq8t6yextloqp/export.pkl?raw=1'
+export_file_url = 'https://drive.google.com/file/d/1P0YY48wqSCku8sc8KMVJNakwVVm6Y1kW/view'
 export_file_name = 'export.pkl'
 
 classes = ['black', 'grizzly', 'teddys']
@@ -30,7 +31,8 @@ async def download_file(url, dest):
 
 
 async def setup_learner():
-    await download_file(export_file_url, path / export_file_name)
+    # await download_file(export_file_url, path / export_file_name)
+	await download_file('https://drive.google.com/file/d/1P0YY48wqSCku8sc8KMVJNakwVVm6Y1kW/view')
     try:
         learn = load_learner(path, export_file_name)
         return learn
