@@ -9,7 +9,7 @@ from starlette.middleware.cors import CORSMiddleware
 from starlette.responses import HTMLResponse, JSONResponse
 from starlette.staticfiles import StaticFiles
 
-export_file_url = 'https://drive.google.com/open?id=1P0YY48wqSCku8sc8KMVJNakwVVm6Y1kW'
+export_file_url = 'https://drive.google.com/drive/folders/1mPZ-tZlQNTODA6LYPh9rOWE1ANvu4mJn?usp=sharing'
 export_file_name = 'export.pkl'
 
 classes = ['black', 'grizzly', 'teddys']
@@ -30,8 +30,7 @@ async def download_file(url, dest):
 
 
 async def setup_learner():
-    #await download_file(export_file_url, path / export_file_name)
-	await download_file(https://drive.google.com/open?id=1P0YY48wqSCku8sc8KMVJNakwVVm6Y1kW)
+    await download_file(export_file_url, path / export_file_name)
     try:
         learn = load_learner(path, export_file_name)
         return learn
